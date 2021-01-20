@@ -6,7 +6,7 @@ class Supplier(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     phone = models.CharField(max_length=11)
-    address = models.CharField(max_length=200, , blank=True, null=True)
+    address = models.CharField(max_length=200, blank=True, null=True)
     email = models.EmailField(max_length=50, unique=True)
     cnpj = models.CharField(max_length=15, unique=True)
     is_deleted = models.BooleanField(default=False)

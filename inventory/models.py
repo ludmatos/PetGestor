@@ -7,7 +7,7 @@ class Stock(models.Model):
     category_tag = models.CharField(max_length=20, blank=True, null=True)
     NCM = models.CharField(max_length=8, default=00000000)
     bar_code = models.IntegerField(unique=True)
-    price = models.Decimal(decimal_places=2, max_digits=10000)
+    price = models.DecimalField(decimal_places=2, max_digits=10000)
     is_deleted = models.BooleanField(default=False)
 
     def __str__(self):
